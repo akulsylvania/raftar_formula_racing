@@ -1,0 +1,16 @@
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+v=np.array([2.48, 2.5, 2.53, 2.54, 2.57, 2.591, 2.45, 2.41, 2.38])
+i=np.array([0,2.2, 4.4, 6.6, 9.9, 13.08, -5.46, -11.76, -16.38])
+
+a,b=np.polyfit(i,v,1)
+
+plt.scatter(i,v, color='red')
+plt.plot(i,a*i+b)
+print(a,b)
+
+plt.xlabel('Current')
+plt.ylabel('Vout')
+plt.show()
